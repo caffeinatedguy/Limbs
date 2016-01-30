@@ -10038,6 +10038,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &27645832
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_Name
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &35224823
 Prefab:
   m_ObjectHideFlags: 0
@@ -10943,7 +10997,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.08539307, y: -0.3505856, z: -0.0010480833}
+  m_ConnectedAnchor: {x: -0.08539313, y: -0.3505856, z: -0.0010480833}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -11424,19 +11478,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1528998666}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.336
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11456,7 +11510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
       propertyPath: m_ReceiveShadows
@@ -11486,6 +11540,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0.00039637554
       objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1def060a61daff94897e29b421ab6e49, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
   m_IsPrefabParent: 0
@@ -12271,10 +12329,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe030bd6a39b684d97fb274b10a5ef2, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &903935424 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
-  m_PrefabInternal: {fileID: 609866579}
 --- !u!4 &913189060 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 2}
@@ -12711,7 +12765,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.24318, y: 0.0063852617, z: -0.00000003738205}
+  m_ConnectedAnchor: {x: 0.24317998, y: 0.0063852617, z: -0.00000003738205}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -14217,7 +14271,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.101393074, y: -0.35058573, z: -0.0010480838}
+  m_ConnectedAnchor: {x: 0.101393044, y: -0.35058573, z: -0.0010480838}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -14433,26 +14487,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ee8fbc6cb12ce45a6186a0b4be2387, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1528998660
+--- !u!1 &1528998660 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1528998666}
-  - 95: {fileID: 1528998665}
-  - 54: {fileID: 1528998664}
-  - 143: {fileID: 1528998663}
-  - 114: {fileID: 1528998661}
-  - 114: {fileID: 1528998662}
-  m_Layer: 0
-  m_Name: Player2
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_PrefabInternal: {fileID: 27645832}
 --- !u!114 &1528998661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14511,7 +14549,7 @@ CharacterController:
   m_GameObject: {fileID: 1528998660}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.58
   m_Radius: 0.5
@@ -14535,37 +14573,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1528998665
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 512059c4f2b78ef48b7eca9e91198380,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1528998660}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!4 &1528998666
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400038, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1528998660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05, z: -1.81}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 903935424}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1001 &1540947592
 Prefab:
   m_ObjectHideFlags: 0
@@ -15033,7 +15040,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.007999986, y: 0.37500316, z: -0.00039637554}
+  m_ConnectedAnchor: {x: -0.007999927, y: 0.37500316, z: -0.00039637554}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -15268,8 +15275,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33, y: 0.025, z: 0.1}
-  m_Center: {x: 0, y: 0.03, z: 0}
+  m_Size: {x: 0.38, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1697010913 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 8db24802b0170464c9267f3c45e6f7ea, type: 2}
@@ -15835,6 +15842,69 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d153a8045fa3a8143b860fc787040f99, type: 2}
   m_PrefabInternal: {fileID: 287046656}
+--- !u!1 &2012662919 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_PrefabInternal: {fileID: 609866579}
+--- !u!65 &2012662921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012662919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.43, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!59 &2012662922
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012662919}
+  m_ConnectedBody: {fileID: 1656661209}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0.000000059604645, y: 0.31467837, z: -0.00000001618173}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+--- !u!54 &2012662923
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012662919}
+  serializedVersion: 2
+  m_Mass: 0.15
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2013025630 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c691257436ab8b94c82c2a977d632162, type: 2}
