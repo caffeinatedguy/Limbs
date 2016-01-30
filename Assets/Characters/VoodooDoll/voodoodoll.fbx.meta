@@ -25,6 +25,15 @@ ModelImporter:
     100034: voodoo_doll_rig:R_Leg_Tip
     100036: voodoo_doll_rig:Skeleton
     100038: //RootNode
+    100040: voodoo_doll_rig:Hat
+    100042: voodoo_doll_rig:L_Ear
+    100044: voodoo_doll_rig:L_Eye
+    100046: voodoo_doll_rig:Mouth
+    100048: voodoo_doll_rig:Neck
+    100050: voodoo_doll_rig:Nose
+    100052: voodoo_doll_rig:R_Ear
+    100054: voodoo_doll_rig:R_Eye
+    100056: voodoo_doll_rig:R_Reg_Tip
     400000: voodoo_doll_rig:Body
     400002: voodoo_doll_rig:Chest
     400004: voodoo_doll_rig:Geo
@@ -45,6 +54,15 @@ ModelImporter:
     400034: voodoo_doll_rig:R_Leg_Tip
     400036: voodoo_doll_rig:Skeleton
     400038: //RootNode
+    400040: voodoo_doll_rig:Hat
+    400042: voodoo_doll_rig:L_Ear
+    400044: voodoo_doll_rig:L_Eye
+    400046: voodoo_doll_rig:Mouth
+    400048: voodoo_doll_rig:Neck
+    400050: voodoo_doll_rig:Nose
+    400052: voodoo_doll_rig:R_Ear
+    400054: voodoo_doll_rig:R_Eye
+    400056: voodoo_doll_rig:R_Reg_Tip
     4300000: voodoo_doll_rig:Body
     4300002: voodoo_doll_rig:Head
     4300004: voodoo_doll_rig:L_Arm
