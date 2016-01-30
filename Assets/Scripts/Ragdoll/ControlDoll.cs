@@ -18,35 +18,49 @@ public class ControlDoll : MonoBehaviour
 
     void Update()
     {
-        Vector3 AnalogPosition = new Vector3(
-            Input.GetAxis("Horizontal"),
-            0f,
-            Input.GetAxis("Vertical"));
+        Vector3 AttractTowards = mostActiveController();
 
-        if (Mathf.Abs(AnalogPosition.magnitude) > float.Epsilon)
+        if (Mathf.Abs(AttractTowards.magnitude) > float.Epsilon)
         {
-            AnalogPosition.y = .5f; // Add some up force to reduce drag
-            Debug.Log("Adding " + AnalogPosition + " to " + RightArm.velocity);
+            AttractTowards.y = .5f; // Add some up force to reduce drag
+            Debug.Log("Adding " + AttractTowards + " to " + RightArm.velocity);
 
             if (Input.GetButton("Fire1"))
             {
-                RightArm.AddForce(AnalogPosition * force * Time.deltaTime);
+                RightArm.AddForce(AttractTowards * force * Time.deltaTime);
             }
 
             if (Input.GetButton("Fire3"))
             {
-                LeftArm.AddForce(AnalogPosition * force * Time.deltaTime);
+                LeftArm.AddForce(AttractTowards * force * Time.deltaTime);
             }
 
             if (Input.GetButton("Fire2"))
             {
-                RightLeg.AddForce(AnalogPosition * force * Time.deltaTime);
+                RightLeg.AddForce(AttractTowards * force * Time.deltaTime);
             }
 
             if (Input.GetButton("Jump"))
             {
-                LeftLeg.AddForce(AnalogPosition * force * Time.deltaTime);
+                LeftLeg.AddForce(AttractTowards * force * Time.deltaTime);
             }
-        }	
+        }
+    }
+
+    private Vector3 mostActiveController()
+    {
+        Vector3 keyboard = new Vector3(
+            Input.GetAxis("HorizontalArrows"),
+            0f,
+            Input.GetAxis("VerticalArrows"));
+        Vector3 controller1 = new Vector3(
+            Input.GetAxis("HorizontalGP1"),
+            0f,
+            Input.GetAxis("VerticalGP1"));
+
+        if (Mathf.Abs(keyboard.magnitude) > Mathf.Abs(controller1.magnitude))
+            return keyboard;
+        else
+            return controller1;
     }
 }

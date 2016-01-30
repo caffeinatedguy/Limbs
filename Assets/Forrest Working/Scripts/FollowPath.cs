@@ -20,14 +20,11 @@ public class FollowPath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("heading towards node number" + nodeNumber + ". At position " + target);
 		//Check if you're at the end of the path
 		if (nodeNumber < (nodes.Length)) 
 		{
 			//Find desired direction towards node
 			Vector3 direction = target - transform.position;
-
-			Debug.DrawRay (transform.position, direction);
 
 			//Find desired rotation
 			Quaternion targetRotation = Quaternion.LookRotation (direction, Vector3.up);
@@ -41,7 +38,9 @@ public class FollowPath : MonoBehaviour {
 			//Check if node has been reached, then target next node
 			if (direction.magnitude < nodeRadius) {
 				nodeNumber++;
-				target = nodes [nodeNumber].transform.position;
+				if (nodeNumber < (nodes.Length)) {
+					target = nodes [nodeNumber].transform.position;
+				}
 			}
 		}
 	}
