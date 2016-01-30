@@ -78,17 +78,36 @@ public class PlayerController : MonoBehaviour
 	// Is the user pressing any keys?
 	private bool isMoving= false;
 	// When did the user start walking (Used for going into trot after a while)
-	private float walkTimeStart= 0.0f;
 	// Last time the jump button was clicked down
 	private float lastJumpButtonTime= -10.0f;
 	// Last time we performed a jump
 	private float lastJumpTime= -1.0f;
 	
-	
-	// the height we jumped from (Used to determine for how long to apply extra jump power after jumping.)
-	private float lastJumpStartHeight= 0.0f;
 
 	private float lastGroundedTime= 0.0f;
+
+
+
+	[SerializeField]
+	GameObject[] _limbs;
+
+	[SerializeField]
+	Rigidbody[] _moveBodys;
+
+	float _torqValue = 1000.0f;
+
+
+	void ApplyForce(Vector3 force)
+	{
+		//Rigidbody[] bodies = GetComponentsInChildren<Rigidbody> ();
+
+		foreach (Rigidbody body in _moveBodys) 
+		{	
+			//body.AddTorque (transform.right * Time.deltaTime * _torqValue);
+			body.AddForce (force);
+			Debug.Log ("Adding force " + body.name + "_" + force.ToString());
+		}
+	}
 	
 	
 	private bool isControllable= true;
@@ -96,38 +115,13 @@ public class PlayerController : MonoBehaviour
 	void  Awake ()
 	{
 		moveDirection = transform.TransformDirection(Vector3.forward);
-		
-		//_animation = GetComponent<Animation>();
-		//if(!_animation)
-		//	Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
-		
-		/*
-public AnimationClip idleAnimation;
-public AnimationClip walkAnimation;
-public AnimationClip runAnimation;
-public AnimationClip jumpPoseAnimation;	
-	*/
-		if(!idleAnimation) {
-			_animation = null;
-			Debug.Log("No idle animation found. Turning off animations.");
-		}
-		if(!walkAnimation) {
-			_animation = null;
-			Debug.Log("No walk animation found. Turning off animations.");
-		}
-		if(!runAnimation) {
-			_animation = null;
-			Debug.Log("No run animation found. Turning off animations.");
-		}
-		if(!jumpPoseAnimation && canJump) {
-			_animation = null;
-			Debug.Log("No jump animation found and the character has canJump enabled. Turning off animations.");
-		}
-		
 	}
+
+
+
+	float lastJumpStartHeight = 0;
 	
-	
-	void  UpdateSmoothedMovementDirection ()
+	float GetMovementDirection ()
 	{
 		Transform cameraTransform= Camera.main.transform;
 		bool grounded= IsGrounded();
@@ -141,13 +135,9 @@ public AnimationClip jumpPoseAnimation;
 		// Always orthogonal to the forward vector
 		Vector3 right= new Vector3(forward.z, 0, -forward.x);
 
-        //float v = Input.GetAxisRaw("VerticalGP" + ((int)_player.playerId).ToString()) + Input.GetAxisRaw("Vertical");
-        //float h = Input.GetAxisRaw("HorizontalGP" + ((int)_player.playerId).ToString()) + Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw(Globals.Instance.ManageTeam.GetPlayerAxisName("Vertical", _player.playerId)) + Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw(Globals.Instance.ManageTeam.GetPlayerAxisName("Horizontal", _player.playerId)) + Input.GetAxisRaw("Horizontal");
 
-		//float v= Input.GetAxisRaw("Vertical");
-		//float h= Input.GetAxisRaw("Horizontal");
 		
 		// Are we moving backwards or looking backwards
 		if (v < -0.2f)
@@ -159,7 +149,10 @@ public AnimationClip jumpPoseAnimation;
 		isMoving = Mathf.Abs (h) > 0.1f || Mathf.Abs (v) > 0.1f;
 		
 		// Target direction relative to the camera
-		Vector3 targetDirection= h * right + v * forward;
+		Vector3 targetDirection = h * right + v * forward;
+
+		float targetSpeed = 0;
+
 		
 		// Grounded controls
 		if (grounded)
@@ -169,68 +162,31 @@ public AnimationClip jumpPoseAnimation;
 			if (isMoving != wasMoving)
 				lockCameraTimer = 0.0f;
 			
-			// We store speed and direction seperately,
-			// so that when the character stands still we still have a valid forward direction
-			// moveDirection is always normalized, and we only update it if there is user input.
+	
 			if (targetDirection != Vector3.zero)
 			{
-				// If we are really slow, just snap to the target direction
-				//if (moveSpeed < walkSpeed * 0.9f && grounded)
-				//{
-					moveDirection = targetDirection.normalized;
-				//}
-				// Otherwise smoothly turn towards it
-				//else
-				//{
-				//	moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
-					
-				//	moveDirection = moveDirection.normalized;
-				//}
+				moveDirection = targetDirection.normalized;
 			}
 			
-			// Smooth the speed based on the current target direction
-			// Choose target speed
-			//* We want to support analog input but make sure you cant walk faster diagonally than just forward or sideways
-			float targetSpeed= Mathf.Min(targetDirection.magnitude, 1.0f);
+			targetSpeed = Mathf.Min(targetDirection.magnitude, 1.0f);
 			
-			_characterState = CharacterState.Idle;
-			
-			/*// Pick speed modifier
-			if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
-			{
-				targetSpeed *= runSpeed;
-				_characterState = CharacterState.Running;
-			}
-			else if (Time.time - trotAfterSeconds > walkTimeStart)
-			{
-				targetSpeed *= trotSpeed;
-				_characterState = CharacterState.Trotting;
-			}
-			else
-			{
-				targetSpeed *= walkSpeed;
-				_characterState = CharacterState.Walking;
-			}*/
+			_characterState = CharacterState.Walking;
+
 
 			targetSpeed *= trotSpeed;
-			_characterState = CharacterState.Trotting;
-			
-			moveSpeed = targetSpeed;//Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
-			
-			// Reset walk time start when we slow down
-			if (moveSpeed < walkSpeed * 0.3f)
-				walkTimeStart = Time.time;
+			Debug.Log ("targetSpeed = " + targetSpeed.ToString ());
 		}
 		// In air controls
 		else
 		{
 			// Lock camera while in air
-			if (jumping)
+			if (jumping) 
+			{
 				lockCameraTimer = 0.0f;
-					}
-		
-		
-		
+			}
+		}
+
+		return targetSpeed;
 	}
 	
 	
@@ -299,22 +255,43 @@ public AnimationClip jumpPoseAnimation;
 			Input.ResetInputAxes();
 		}
 		
-		UpdateSmoothedMovementDirection();
+		moveSpeed = GetMovementDirection();
 
-		ApplyGravity();
+		//ApplyGravity();
 		
 		// Calculate actual motion
-		Vector3 movement= moveDirection * moveSpeed + new Vector3 (0, verticalSpeed, 0);
+		Vector3 movement = moveDirection * moveSpeed + new Vector3 (0, verticalSpeed + 400, 0);
 		movement *= Time.deltaTime;
+
+
+
+
+		if(movement.sqrMagnitude > 0.01f)
+		{
+			ApplyForce (movement);
+
+			Debug.Log ("Movement = " + movement.ToString ());
+		}
+
+		foreach (GameObject limb in _limbs) 
+		{
+			//limb.transform.RotateAround (transform.position, transform.right, 10.1f);
+		}
+
+
 
 		
 		// Move the controller
-		CharacterController controller = GetComponent<CharacterController>();
-		if (movement.sqrMagnitude > 0.01f) 
-		{
-			controller.transform.LookAt (controller.transform.position + movement);
-		}
-		collisionFlags = controller.Move(movement);
+		//CharacterController controller = GetComponent<CharacterController>();
+		//if (movement.sqrMagnitude > 0.01f) 
+		//{
+		//	controller.transform.LookAt (controller.transform.position + movement);
+		//}
+		//collisionFlags = controller.Move(movement);
+
+
+
+
 	}
 	
 	void OnControllerColliderHit ( ControllerColliderHit hit   )
@@ -336,7 +313,7 @@ public AnimationClip jumpPoseAnimation;
 	
 	public bool IsGrounded ()
 	{
-		return (collisionFlags & CollisionFlags.CollidedBelow) != 0;
+		return true;//(collisionFlags & CollisionFlags.CollidedBelow) != 0;
 	}
 	
 	public Vector3 GetDirection ()
