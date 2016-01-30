@@ -35,7 +35,6 @@ public class CarSpawner : MonoBehaviour {
 	//Get a random car from the object pool, assign it a random path, and set it to following
 	void SpawnCar(){
 		string carToGet = carTypes [Random.Range (0, carTypes.Length - 1)];
-		Debug.Log("Getting Car of Type: " + carToGet);
 		GameObject car = ObjectPool.instance.GetObjectOfType (carToGet, false);
 		FollowPath carScript = car.GetComponent<FollowPath>();
 		carScript.SetUpPath (paths [Random.Range (0, paths.Length - 1)], transform);

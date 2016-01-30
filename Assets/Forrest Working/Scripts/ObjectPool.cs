@@ -50,7 +50,6 @@ public class ObjectPool : MonoBehaviour
 			{
 				GameObject newObj = Instantiate(objectPrefab) as GameObject;
 				newObj.name = objectPrefab.name;
-				Debug.Log ("Pooled Object name: " + newObj.name);
 				PoolObject(newObj);
 			}
 

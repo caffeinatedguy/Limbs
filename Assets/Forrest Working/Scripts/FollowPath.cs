@@ -31,7 +31,7 @@ public class FollowPath : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		if (followingPath && path != null) {
 			//Check if you're at the end of the path
 			//Find desired direction towards node
@@ -41,7 +41,7 @@ public class FollowPath : MonoBehaviour {
 			Quaternion targetRotation = Quaternion.LookRotation (direction, Vector3.up);
 
 			//Slerp to it over time
-			transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, turnRate * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation, turnRate * Time.deltaTime);
 
 			//Move in forward direction at speed
 			transform.Translate (new Vector3 (0, 0, speed * Time.deltaTime));
@@ -49,7 +49,6 @@ public class FollowPath : MonoBehaviour {
 			//Check if node has been reached, then target next node if not
 			//If last node has been reached set following and path to false and pool yourself
 			if (direction.magnitude < nodeRadius) {
-				Debug.Log(gameObject.name + " reached node number " + nodeNumber);
 				nodeNumber++;
 				if (nodeNumber < (nodes.Length)) {
 					target = nodes [nodeNumber].transform.position;
