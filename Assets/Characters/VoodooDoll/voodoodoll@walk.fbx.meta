@@ -3,7 +3,7 @@ guid: 1fce0b484e7440f4d9d7e9c2c6e49488
 timeCreated: 1454146483
 licenseType: Free
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: voodoo_doll_rig:Body
     100002: voodoo_doll_rig:Chest
@@ -51,7 +51,7 @@ ModelImporter:
     4300006: voodoo_doll_rig:R_Arm
     4300008: voodoo_doll_rig:L_Leg
     4300010: voodoo_doll_rig:R_Leg
-    7400000: Take 001
+    7400000: walk
     9500000: //RootNode
     13700000: voodoo_doll_rig:Body
     13700002: voodoo_doll_rig:Head
@@ -66,6 +66,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -73,12 +74,89 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: voodoo_doll_rig:Geo
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:Body
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:Head
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:L_Arm
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:L_Leg
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:R_Arm
+        weight: 1
+      - path: voodoo_doll_rig:Geo/voodoo_doll_rig:R_Leg
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest/voodoo_doll_rig:Head
+          1
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest/voodoo_doll_rig:L_Arm
+          1
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest/voodoo_doll_rig:L_Arm
+          1/voodoo_doll_rig:L_Arm_Tip
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest/voodoo_doll_rig:R_Arm
+          1
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:Chest/voodoo_doll_rig:R_Arm
+          1/voodoo_doll_rig:R_Arm_Tip
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:L_Leg
+          1
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:L_Leg
+          1/voodoo_doll_rig:L_Leg_Tip
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:R_Leg
+          1
+        weight: 1
+      - path: voodoo_doll_rig:Skeleton/voodoo_doll_rig:Pelvis/voodoo_doll_rig:R_Leg
+          1/voodoo_doll_rig:R_Leg_Tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -99,20 +177,19 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0

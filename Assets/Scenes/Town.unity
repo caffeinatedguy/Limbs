@@ -11015,9 +11015,9 @@ HingeJoint:
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
-  m_BreakForce: 100
-  m_BreakTorque: 100
-  m_EnableCollision: 0
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
 --- !u!4 &459471337 stripped
 Transform:
@@ -11544,6 +11544,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1def060a61daff94897e29b421ab6e49, type: 2}
+    - target: {fileID: 9500000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
   m_IsPrefabParent: 0
@@ -14289,9 +14297,9 @@ HingeJoint:
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
-  m_BreakForce: 100
-  m_BreakTorque: 100
-  m_EnableCollision: 0
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
 --- !u!54 &1475794731
 Rigidbody:
@@ -15060,7 +15068,7 @@ HingeJoint:
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
 --- !u!1001 &1659743259
 Prefab:
