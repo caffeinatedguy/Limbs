@@ -50,6 +50,7 @@ public class ObjectPool : MonoBehaviour
 			{
 				GameObject newObj = Instantiate(objectPrefab) as GameObject;
 				newObj.name = objectPrefab.name;
+				Debug.Log ("Pooled Object name: " + newObj.name);
 				PoolObject(newObj);
 			}
 
@@ -77,7 +78,10 @@ public class ObjectPool : MonoBehaviour
 					return pooledObject;
 
 				} else if(!onlyPooled) {
-					return Instantiate(objectPrefabs[i]) as GameObject;
+					GameObject obj = Instantiate(objectPrefabs[i]) as GameObject;
+					int pos = obj.name.IndexOf ("(");
+					obj.name = obj.name.Substring(0, pos);
+					return obj;
 				}
 
 				break;
