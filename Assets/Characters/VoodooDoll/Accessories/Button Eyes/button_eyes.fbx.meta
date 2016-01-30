@@ -10,8 +10,11 @@ ModelImporter:
     400000: //RootNode
     400002: polySurface8
     2300000: polySurface8
+    2300002: //RootNode
     3300000: polySurface8
+    3300002: //RootNode
     4300000: polySurface8
+    4300002: button_eyes
   materials:
     importMaterials: 0
     materialName: 0
