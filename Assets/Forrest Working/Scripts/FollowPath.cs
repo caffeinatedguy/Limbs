@@ -24,6 +24,7 @@ public class FollowPath : MonoBehaviour {
 	private bool checkingStopped = false;
 	private bool reverse = false;
 	private bool grounded = false;
+	private int randomReverseTurn = 0;
 
 
 	// Use this for initialization
@@ -86,6 +87,8 @@ public class FollowPath : MonoBehaviour {
 				_rigidbody.AddForce (transform.forward * powerXZ);
 			} else {
 				_rigidbody.AddForce (-transform.forward * powerXZ);
+
+				_rigidbody.AddTorque (Vector3.up * randomReverseTurn * turnRate);
 			}
 
 
@@ -131,10 +134,9 @@ public class FollowPath : MonoBehaviour {
 		//Magnitude of speed vector
 		if (forwardSpeed < stuckSpeed) {
 			reverse = true;
-			turnRate += 50.0f;
+			randomReverseTurn = Random.Range (-1, 1);
 			yield return new WaitForSeconds (Random.Range(reverseTime - reverseStuckRandomRange,
 															reverseTime + reverseStuckRandomRange));
-			turnRate -= 50.0f;
 			reverse = false;
 		}
 
