@@ -20,7 +20,7 @@ public class PlayerArmController : MonoBehaviour
 		float v = Input.GetAxisRaw(Globals.Instance.ManageTeam.GetPlayerAxisName("VerticalRight", _player.playerId)) + Input.GetAxisRaw("Vertical");
 		float h = Input.GetAxisRaw(Globals.Instance.ManageTeam.GetPlayerAxisName("HorizontalRight", _player.playerId)) + Input.GetAxisRaw("Horizontal");
 
-		Debug.Log ("Right stick = " + v.ToString () + "_" + h.ToString ());
+
 	}
 
 
