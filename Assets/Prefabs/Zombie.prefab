@@ -103,6 +103,7 @@ GameObject:
   - 195: {fileID: 19565022}
   - 114: {fileID: 11466710}
   - 82: {fileID: 8269014}
+  - 114: {fileID: 11455846}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -579,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.365772, y: 1.2289394, z: 5.978588}
+  m_LocalPosition: {x: 10.89, y: 0.12498751, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487220}
@@ -1081,6 +1082,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11455846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925c9c975a55f40239f8b9b233ea21fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 95bb375d83d8a43e2b531a59205d4a68, type: 3}
+  - {fileID: 8300000, guid: 5f87975c0423547e4949f2980a510ffb, type: 3}
+  - {fileID: 8300000, guid: 1b7c9e04636684e6c8a2daa11cd17554, type: 3}
+  - {fileID: 8300000, guid: 7c1ccc303f49741c3a58be65de8ed81d, type: 3}
+  playChance: 1
 --- !u!114 &11466710
 MonoBehaviour:
   m_ObjectHideFlags: 1
