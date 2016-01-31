@@ -85,6 +85,222 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3271002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 134694, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 3271003}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3271003
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 438758, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3271002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 405839506}
+  m_Father: {fileID: 420510658}
+  m_RootOrder: 0
+--- !u!1 &77269882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 159384, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 77269883}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Mouth_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77269883
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 472458, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77269882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.104956016, z: 0.2498443}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 3
+--- !u!1 &94400363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 120080, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 94400364}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Ear_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94400364
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 442056, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94400363}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.26315027, y: 0.0031946143, z: 0.00019552262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 1
+--- !u!1 &100651296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 163202, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 100651297}
+  - 137: {fileID: 100651298}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Leg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &100651297
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 485220, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100651296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 3
+--- !u!137 &100651298
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13762812, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100651296}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300008, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 876550283}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 876550283}
+  m_AABB:
+    m_Center: {x: -0.011531536, y: -0.22188249, z: 0.003154993}
+    m_Extent: {x: 0.12640056, y: 0.2208578, z: 0.14171267}
+  m_DirtyAABB: 0
+--- !u!1 &176919058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 128638, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 176919059}
+  - 137: {fileID: 176919060}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176919059
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 405922, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176919058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 4
+--- !u!137 &176919060
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13777204, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176919058}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300006, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 1678358603}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1678358603}
+  m_AABB:
+    m_Center: {x: 0.12890188, y: -0.25965875, z: -0.004999995}
+    m_Extent: {x: 0.1488436, y: 0.27429467, z: 0.09287177}
+  m_DirtyAABB: 0
 --- !u!1001 &222691009
 Prefab:
   m_ObjectHideFlags: 0
@@ -154,12 +370,32 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6590542, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
       propertyPath: m_Size.y
-      value: 1.09
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 6590542, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
       propertyPath: m_Center.y
-      value: 1.02
+      value: 0.83
       objectReference: {fileID: 0}
+    - target: {fileID: 179982, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 119810, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431988, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+      propertyPath: JointEntities.Array.data[0].Joint
+      value: 
+      objectReference: {fileID: 1593456331}
+    - target: {fileID: 11431988, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+      propertyPath: JointEntities.Array.data[1].Joint
+      value: 
+      objectReference: {fileID: 1907163816}
+    - target: {fileID: 11431988, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+      propertyPath: JointEntities.Array.data[2].Joint
+      value: 
+      objectReference: {fileID: 535883041}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
   m_IsPrefabParent: 0
@@ -236,10 +472,159 @@ CharacterJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+--- !u!1 &243393332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 175878, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 243393333}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Foot_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243393333
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 490104, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243393332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440622466}
+  m_RootOrder: 0
+--- !u!1 &276420395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 102160, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 276420396}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Leg_Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &276420396
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 490266, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276420395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.4320502, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 299896417}
+  m_Father: {fileID: 876550283}
+  m_RootOrder: 0
 --- !u!4 &283069403 stripped
 Transform:
   m_PrefabParentObject: {fileID: 476786, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
   m_PrefabInternal: {fileID: 222691009}
+--- !u!1 &299896416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 139844, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 299896417}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Foot_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &299896417
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 452098, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299896416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 276420396}
+  m_RootOrder: 0
+--- !u!1 &333845693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 194244, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 333845694}
+  - 137: {fileID: 333845695}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333845694
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 472334, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333845693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 1
+--- !u!137 &333845695
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13745254, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333845693}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300002, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 1036676903}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1036676903}
+  m_AABB:
+    m_Center: {x: 0, y: 0.014300585, z: 0.0005302429}
+    m_Extent: {x: 0.2709445, y: 0.25750935, z: 0.27094448}
+  m_DirtyAABB: 0
 --- !u!4 &354943627 stripped
 Transform:
   m_PrefabParentObject: {fileID: 496066, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -319,6 +704,298 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &382947919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 196938, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 382947920}
+  - 137: {fileID: 382947921}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Leg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382947920
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 444562, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382947919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 5
+--- !u!137 &382947921
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13731694, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382947919}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300010, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 1311384559}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1311384559}
+  m_AABB:
+    m_Center: {x: 0.011406675, y: -0.22188216, z: 0.003154993}
+    m_Extent: {x: 0.12629513, y: 0.2208578, z: 0.14171267}
+  m_DirtyAABB: 0
+--- !u!1 &405839505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 131832, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405839506}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405839506
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 476786, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405839505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.4613002, z: 0.005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1593456331}
+  - {fileID: 876550283}
+  - {fileID: 1311384559}
+  m_Father: {fileID: 3271003}
+  m_RootOrder: 0
+--- !u!1 &420510657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 144224, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420510658}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Skeleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420510658
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 426196, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420510657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3271003}
+  m_Father: {fileID: 2049468793}
+  m_RootOrder: 1
+--- !u!1 &531328045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112812, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 531328046}
+  - 137: {fileID: 531328047}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531328046
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 402320, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531328045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 2
+--- !u!137 &531328047
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13767954, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531328045}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300004, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 1907163816}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1907163816}
+  m_AABB:
+    m_Center: {x: -0.12890232, y: -0.25857878, z: -0.034362875}
+    m_Extent: {x: 0.14884359, y: 0.27261913, z: 0.097113095}
+  m_DirtyAABB: 0
+--- !u!1 &535883040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 131852, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 535883041}
+  - 54: {fileID: 535883044}
+  - 144: {fileID: 535883043}
+  - 65: {fileID: 535883042}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Arm_Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535883041
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 463998, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535883040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.21504201, y: -0.48703337, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children:
+  - {fileID: 1295087532}
+  m_Father: {fileID: 1907163816}
+  m_RootOrder: 0
+--- !u!65 &535883042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535883040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!144 &535883043
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535883040}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 7.1086664, y: 0.49337694, z: -0.545}
+  serializedVersion: 2
+  m_SwingAxis: {x: 0, y: 1, z: 0}
+  m_TwistLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowTwistLimit:
+    limit: -20
+    bounciness: 0
+    contactDistance: 0
+  m_HighTwistLimit:
+    limit: 70
+    bounciness: 0
+    contactDistance: 0
+  m_SwingLimitSpring:
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 40
+    bounciness: 0
+    contactDistance: 0
+  m_Swing2Limit:
+    limit: 40
+    bounciness: 0
+    contactDistance: 0
+  m_EnableProjection: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+--- !u!54 &535883044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535883040}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &546822606
 Prefab:
   m_ObjectHideFlags: 0
@@ -381,6 +1058,114 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 426196, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
   m_PrefabInternal: {fileID: 222691009}
+--- !u!1 &683546377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 152386, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 683546378}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Eye_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &683546378
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 414282, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 683546377}
+  m_LocalRotation: {x: 0, y: 0.25881907, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: 0.15455, y: 0.04376357, z: 0.2127211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 6
+--- !u!1 &686701126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 185708, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 686701127}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Ear_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686701127
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 466096, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686701126}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.26315, y: 0.003193569, z: 0.00019552}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 5
+--- !u!1 &731211952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 122466, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 731211953}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Arm_Tip_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &731211953
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 434434, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731211952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974647469}
+  m_RootOrder: 0
+--- !u!1 &771308903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 191798, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 771308904}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Nose_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771308904
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 420610, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771308903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.00826549, z: 0.2676842}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 4
 --- !u!1 &845673182 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 144114, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -470,6 +1255,62 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22, y: 0.34, z: 0.31}
   m_Center: {x: 0, y: -0.21, z: 0}
+--- !u!1 &876550282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 136894, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 876550283}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Leg 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876550283
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 474652, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876550282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13798481, y: -0.018559901, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 276420396}
+  m_Father: {fileID: 405839506}
+  m_RootOrder: 1
+--- !u!1 &974647468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 153162, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 974647469}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Arm_Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974647469
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 410108, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974647468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.215042, y: -0.48703298, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 731211953}
+  m_Father: {fileID: 1678358603}
+  m_RootOrder: 0
 --- !u!1 &975537751 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 131852, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -547,6 +1388,237 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1036676902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 125852, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1036676903}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Head 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036676903
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 489060, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036676902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.2197676, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1641445566}
+  - {fileID: 94400364}
+  - {fileID: 1556435648}
+  - {fileID: 77269883}
+  - {fileID: 771308904}
+  - {fileID: 686701127}
+  - {fileID: 683546378}
+  m_Father: {fileID: 1273791115}
+  m_RootOrder: 0
+--- !u!1 &1042718869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 111762, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1042718870}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Geo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042718870
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 467934, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042718869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1168842706}
+  - {fileID: 333845694}
+  - {fileID: 531328046}
+  - {fileID: 100651297}
+  - {fileID: 176919059}
+  - {fileID: 382947920}
+  m_Father: {fileID: 2049468793}
+  m_RootOrder: 0
+--- !u!1 &1168842705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 198048, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1168842706}
+  - 137: {fileID: 1168842707}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1168842706
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 498082, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168842705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042718870}
+  m_RootOrder: 0
+--- !u!137 &1168842707
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13729084, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168842705}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a59912d2bda91b543a7416a39c7bf788, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Bones:
+  - {fileID: 1593456331}
+  - {fileID: 405839506}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 405839506}
+  m_AABB:
+    m_Center: {x: 0, y: 0.2763096, z: 0.010846257}
+    m_Extent: {x: 0.25915372, y: 0.35141736, z: 0.21145418}
+  m_DirtyAABB: 0
+--- !u!1 &1273791114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 133480, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1273791115}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273791115
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 451378, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1273791114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.15317236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1036676903}
+  m_Father: {fileID: 1593456331}
+  m_RootOrder: 1
+--- !u!1 &1295087531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 144114, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1295087532}
+  - 135: {fileID: 1295087533}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Arm_Tip_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1295087532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 453866, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295087531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 535883041}
+  m_RootOrder: 0
+--- !u!135 &1295087533
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295087531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1311384558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 116380, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1311384559}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Leg 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311384559
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 410392, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311384558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13798499, y: -0.018560182, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1440622466}
+  m_Father: {fileID: 405839506}
+  m_RootOrder: 2
 --- !u!1 &1336211668 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 179982, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -557,13 +1629,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336211668}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 174d918159c79b8419cdef9a37d45cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
-  Target: {fileID: 1724764417}
+  Target: {fileID: 1509397991}
   JointEntities:
   - Joint: {fileID: 1336211675}
     AngleRestrictionRange:
@@ -655,6 +1727,22 @@ MonoBehaviour:
       zMax: 0
   IsDamping: 0
   DampingMax: 0.5
+--- !u!114 &1336211670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336211668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b928adbb5dde6408928fdf62325d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LimbJoints:
+  - {fileID: 1914121051}
+  - {fileID: 852102173}
+  - {fileID: 1387248546}
+  - {fileID: 232602699}
 --- !u!54 &1336211671 stripped
 Rigidbody:
   m_PrefabParentObject: {fileID: 5430108, guid: 1cbd1962c8529484b832b4d9ba91def3,
@@ -741,6 +1829,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1440622465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 115116, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1440622466}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Reg_Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1440622466
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 419456, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1440622465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.4320499, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 243393333}
+  m_Father: {fileID: 1311384559}
+  m_RootOrder: 0
 --- !u!1 &1460915218
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,10 +1918,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!4 &1509397991 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463790, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 222691009}
 --- !u!4 &1535347719 stripped
 Transform:
   m_PrefabParentObject: {fileID: 464578, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
   m_PrefabInternal: {fileID: 222691009}
+--- !u!1 &1556435647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 125616, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1556435648}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Eye_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1556435648
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 427224, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1556435647}
+  m_LocalRotation: {x: 0, y: -0.25881907, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: -0.15454754, y: 0.04376162, z: 0.21272068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 2
+--- !u!1 &1593456330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114154, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1593456331}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593456331
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 496066, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593456330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.4682763, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1907163816}
+  - {fileID: 1273791115}
+  - {fileID: 1678358603}
+  m_Father: {fileID: 405839506}
+  m_RootOrder: 0
+--- !u!1 &1641445565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 165338, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1641445566}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:Hat_Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641445566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400196, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641445565}
+  m_LocalRotation: {x: -0.25881907, y: 0, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: -0, y: 0.2161714, z: -0.13483241}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036676903}
+  m_RootOrder: 0
+--- !u!1 &1678358602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 151576, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1678358603}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:R_Arm 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1678358603
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 434464, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1678358602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.196292, y: 0.08483355, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 974647469}
+  m_Father: {fileID: 1593456331}
+  m_RootOrder: 2
 --- !u!1 &1724764413
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +2203,34 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 438758, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
   m_PrefabInternal: {fileID: 222691009}
+--- !u!1 &1907163815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 170178, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1907163816}
+  m_Layer: 0
+  m_Name: voodoo_doll_rig:L_Arm 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907163816
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 468798, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907163815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19629155, y: 0.08483383, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 535883041}
+  m_Father: {fileID: 1593456331}
+  m_RootOrder: 0
 --- !u!1 &1914121047 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 136894, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -1163,3 +2423,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &2049468792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 119810, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2049468793}
+  - 95: {fileID: 2049468794}
+  m_Layer: 0
+  m_Name: voodoodoll (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2049468793
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 464578, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049468792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1042718870}
+  - {fileID: 420510658}
+  m_Father: {fileID: 1336211675}
+  m_RootOrder: 2
+--- !u!95 &2049468794
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9528738, guid: 1cbd1962c8529484b832b4d9ba91def3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049468792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 512059c4f2b78ef48b7eca9e91198380, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2d2cd3ae16edd45aeb8d1a3b2bc906fa, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
