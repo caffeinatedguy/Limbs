@@ -202,6 +202,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &927379853 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 179982, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 222691009}
+--- !u!114 &927379854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927379853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174d918159c79b8419cdef9a37d45cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 1
+  Target: {fileID: 0}
+  JointEntities:
+  - Joint: {fileID: 1830701758}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 1031241833}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 0}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 0}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 0}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  IsDamping: 0
+  DampingMax: 0.5
+--- !u!4 &1031241833 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 468798, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 222691009}
 --- !u!1 &1460915218
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +342,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!4 &1830701758 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463998, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 222691009}
 --- !u!1 &1872559166
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,11 @@
 Simple Town - Changelog
 
+Version 11.0 - UPGRADE
+
+- Additional Buildings
+- Additional Props
+- Additional Environment assets
+
 Version 10.05
 - Fixed Road white line issue
 - Added a new grass piece to match the road size
