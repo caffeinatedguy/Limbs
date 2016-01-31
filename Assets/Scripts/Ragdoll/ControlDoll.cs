@@ -9,6 +9,7 @@ public class ControlDoll : MonoBehaviour
     public Rigidbody RightArm;
 
     public float force;
+    public bool AlwaysUseLeftLeg;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class ControlDoll : MonoBehaviour
         if (Mathf.Abs(AttractTowards.magnitude) > float.Epsilon)
         {
             AttractTowards.y = .5f; // Add some up force to reduce drag
-            Debug.Log("Adding " + AttractTowards + " to " + RightArm.velocity);
+            //Debug.Log("Adding " + AttractTowards);
 
             if (Input.GetButton("Fire1"))
             {
@@ -40,7 +41,7 @@ public class ControlDoll : MonoBehaviour
                 RightLeg.AddForce(AttractTowards * force * Time.deltaTime);
             }
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") || AlwaysUseLeftLeg)
             {
                 LeftLeg.AddForce(AttractTowards * force * Time.deltaTime);
             }
