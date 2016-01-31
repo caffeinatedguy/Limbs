@@ -10,12 +10,19 @@ public class FollowPath : MonoBehaviour {
 	public float nodeRadius = 1.0f;
 	public GameObject path;
 	public bool followingPath = false;
+	public float stuckSpeed = 1.0f;
+	public float stuckWindow = 1.0f;
+	public float reverseTime = 1.0f;
+	public float reverseStuckRandomRange = 0.5f;
 
 
 	private Transform[] nodes;
 	private int nodeNumber = 0;
 	private Vector3 target;
 	private Rigidbody _rigidbody;
+	private bool stopped = false;
+	private bool checkingStopped = false;
+	private bool reverse = false;
 
 
 	// Use this for initialization
@@ -42,58 +49,52 @@ public class FollowPath : MonoBehaviour {
 			//Check if you're at the end of the path
 			//Find desired direction towards node
 			Vector3 direction = target - transform.position;
-
-			//Find desired rotation
-			//Quaternion targetRotation = Quaternion.LookRotation (direction.normalized, Vector3.up);
-
-			//Slerp to it over time
-			//transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, turnRate * Time.deltaTime);
-
-			//Move in forward direction at speed
-			//transform.Translate (new Vector3 (0, 0, speed * Time.deltaTime));*/
-
-
-
+		
+			//Current total speed of car
 			Vector3 curspeed = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y, _rigidbody.velocity.z);
+			//Magnitude of speed vector
+			float curspeedMagnitude = curspeed.magnitude;
 
-
-
-			if(curspeed.magnitude > speed)
+			//Clamp to speed if curent magnitude is higher than speed
+			if(curspeedMagnitude > speed)
 			{
 				curspeed = curspeed.normalized;
 				curspeed *= speed;
 			}
-			
 
+			//Find the projection of the total speed in the forward direction
+			float forwardSpeed = Vector3.Project (curspeed, transform.forward.normalized).magnitude;
+
+			//Check if car is "stuck"
+			if (forwardSpeed < stuckSpeed && !checkingStopped) {
+				Debug.Log ("Checking Stopped on " + gameObject.name + " with speed " + curspeedMagnitude);
+				checkingStopped = true;
+				StartCoroutine("CheckStopped");
+			}
 
 			float angleBetween = Vector3.Angle (transform.forward, (target - transform.position));
 			Vector3 normalDirection = Vector3.Cross(transform.forward, (target - transform.position));
-			//Debug.Log (Vector3.Dot (V3,transform.up) + " With angle " + angleBetween);
 
-			//Always Drive Forward
-			_rigidbody.AddForce (transform.forward * power);
+			//Always Drive Forward or back
+			if (!reverse) {
+				_rigidbody.AddForce (transform.forward * power);
+			} else {
+				_rigidbody.AddForce (-transform.forward * power);
+			}
 
-			//Find the projection of the total speed in the forward direction
-			float forwardSpeed = Vector3.Project (curspeed, transform.forward.normalized).sqrMagnitude;
 
 			//If angle between heading and desired heading is negative, torque left
-			if(Vector3.Dot (normalDirection,transform.up) > 0 && forwardSpeed > 1)
+			if(Vector3.Dot (normalDirection,transform.up) > 1 && Mathf.Abs(forwardSpeed) > 0.2)
 			{
 				_rigidbody.AddTorque(Vector3.up * turnRate);
 			}
 
 			//If angle between heading and desired heading is positive, torque right
-			if(Vector3.Dot (normalDirection,transform.up) < 0 && forwardSpeed > 1)
+			if(Vector3.Dot (normalDirection,transform.up) < -1 && Mathf.Abs(forwardSpeed) > 0.2)
 			{
 				//transform.Rotate(Vector3.up * -turnRate);
 				_rigidbody.AddTorque(Vector3.down * turnRate);
 			}
-
-			/*if(Input.GetKey(KeyCode.D))
-			{
-				_rigidbody.AddTorque(Vector3.up * turnRate);
-
-			}*/
 
 
 			//Check if node has been reached, then target next node if not
@@ -110,5 +111,29 @@ public class FollowPath : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	//Check back after a second and see if the car is still stuck.  Set it into reverse if so.
+	IEnumerator CheckStopped(){
+		yield return new WaitForSeconds (Random.Range(stuckWindow - reverseStuckRandomRange, 
+														stuckWindow + reverseStuckRandomRange));
+		//Current total speed of car
+		Vector3 curspeed = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y, _rigidbody.velocity.z);
+		//Find the projection of the total speed in the forward direction
+		float forwardSpeed = Vector3.Project (curspeed, transform.forward.normalized).magnitude;
+
+		Debug.Log ("Checking again on " + gameObject.name + " with forward speed " + forwardSpeed);
+		//Magnitude of speed vector
+		if (forwardSpeed < stuckSpeed) {
+			Debug.Log ("Reversing on " + gameObject.name);
+			reverse = true;
+			turnRate += 50.0f;
+			yield return new WaitForSeconds (Random.Range(reverseTime - reverseStuckRandomRange,
+															reverseTime + reverseStuckRandomRange));
+			turnRate -= 50.0f;
+			reverse = false;
+		}
+
+		checkingStopped = false;
 	}
 }

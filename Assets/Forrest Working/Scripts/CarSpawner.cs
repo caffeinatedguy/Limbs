@@ -13,7 +13,7 @@ public class CarSpawner : MonoBehaviour {
 	//Maximum amount of cars that can be alive from this spawner
 	//public int maxCarsAlive = 3;
 	//Car names
-	public string[] carTypes = {"Cop"};
+	public string[] carTypes;
 
 
 	private bool readyToSpawn = true;
@@ -37,7 +37,9 @@ public class CarSpawner : MonoBehaviour {
 		string carToGet = carTypes [Random.Range (0, carTypes.Length - 1)];
 		GameObject car = ObjectPool.instance.GetObjectOfType (carToGet, false);
 		FollowPath carScript = car.GetComponent<FollowPath>();
-		carScript.SetUpPath (paths [Random.Range (0, paths.Length - 1)], transform);
+		int pathIndex = Random.Range (0, paths.Length);
+		Debug.Log("Spawning index :" + pathIndex + " There are " + paths.Length);
+		carScript.SetUpPath (paths [pathIndex], transform);
 		readyToSpawn = true;
 	}
 }
