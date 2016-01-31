@@ -260,6 +260,21 @@ MonoBehaviour:
       zMax: 0
   IsDamping: 0
   DampingMax: 0.5
+--- !u!114 &927379860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927379853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08256b8b710cf47eeaf64efe9c1f02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _limbToMove: {fileID: 1698042559}
+  _target: {fileID: 2031899206}
+  _rotationAngle: {x: 0, y: 0, z: 0}
+  _forward: {x: 0, y: 0, z: 1}
 --- !u!4 &1031241833 stripped
 Transform:
   m_PrefabParentObject: {fileID: 468798, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
@@ -325,6 +340,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1698042559 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170178, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}
+  m_PrefabInternal: {fileID: 222691009}
 --- !u!4 &1830701758 stripped
 Transform:
   m_PrefabParentObject: {fileID: 463998, guid: 1cbd1962c8529484b832b4d9ba91def3, type: 2}

@@ -38,7 +38,7 @@ public class PlayerArmController : MonoBehaviour
 		// Target direction relative to the camera
 		Vector3 targetDirection = h * right + v * forward;
 
-		//_target.transform.position = _limbToMove.transform.position + targetDirection;
+		_target.transform.position = _limbToMove.transform.position + targetDirection;
 
 
 		//_limbToMove.transform.LookAt ( _limbToMove.transform.position + targetDirection);
