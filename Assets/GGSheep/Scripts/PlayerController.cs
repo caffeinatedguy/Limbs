@@ -103,8 +103,10 @@ public class PlayerController : MonoBehaviour
 
 		foreach (Rigidbody body in _moveBodys) 
 		{	
+			body.transform.LookAt (body.transform.position + moveDirection);
 			//body.AddTorque (transform.right * Time.deltaTime * _torqValue);
-			body.AddForce (force);
+			body.AddForce(force);
+
 			Debug.Log ("Adding force " + body.name + "_" + force.ToString());
 		}
 	}
@@ -257,6 +259,8 @@ public class PlayerController : MonoBehaviour
 		
 		moveSpeed = GetMovementDirection();
 
+		//
+
 		//ApplyGravity();
 		
 		// Calculate actual motion
@@ -264,10 +268,11 @@ public class PlayerController : MonoBehaviour
 		movement *= Time.deltaTime;
 
 
-		movement -= new Vector3 (0.0f, Physics.gravity.y * 0.75f, 0.0f);
+		//movement -= new Vector3 (0.0f, Physics.gravity.y * 0.75f, 0.0f);
 
 		//if(movement.sqrMagnitude > 0.01f)
 		//{
+
 			ApplyForce (movement);
 
 			//Debug.Log ("Movement = " + movement.ToString ());
@@ -292,6 +297,11 @@ public class PlayerController : MonoBehaviour
 
 
 
+	}
+
+	void LateUpdate()
+	{
+		
 	}
 	
 	void OnControllerColliderHit ( ControllerColliderHit hit   )
