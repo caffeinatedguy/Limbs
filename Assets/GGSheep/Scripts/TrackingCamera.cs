@@ -30,7 +30,6 @@ public class TrackingCamera : MonoBehaviour
     /// </summary>
     internal void FixedUpdate()
     {
-		Debug.Log ("Fixed update tracking");
 		var currentPlayerCoG = this.CenterOfGravity();
 		var offset = currentPlayerCoG - this.playerCoG;
 		var targetPosition = this.homePosition + offset;
