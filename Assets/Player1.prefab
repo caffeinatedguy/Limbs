@@ -434,8 +434,10 @@ GameObject:
   - 4: {fileID: 421608}
   - 114: {fileID: 11421508}
   - 114: {fileID: 11455166}
-  - 54: {fileID: 5496000}
   - 65: {fileID: 6590542}
+  - 54: {fileID: 5430108}
+  - 65: {fileID: 6540552}
+  - 114: {fileID: 11401790}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -776,7 +778,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119810}
-  m_LocalRotation: {x: 0, y: 0.8510845, z: 0, w: 0.5250288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -962,7 +964,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467934}
   m_RootOrder: 0
---- !u!54 &5496000
+--- !u!54 &5430108
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -977,6 +979,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6540552
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179982}
+  m_Material: {fileID: 13400000, guid: db5a8a7e192fe4cf3a7d9e92ed345488, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.27, z: 1}
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!65 &6590542
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1006,6 +1020,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08256b8b710cf47eeaf64efe9c1f02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _limbToMove: {fileID: 170178}
+  _player: {fileID: 11421508}
 --- !u!114 &11421508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1062,7 +1089,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _moveBodys:
-  - {fileID: 5496000}
+  - {fileID: 5430108}
 --- !u!137 &13729084
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
