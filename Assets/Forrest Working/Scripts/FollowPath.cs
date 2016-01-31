@@ -25,9 +25,11 @@ public class FollowPath : MonoBehaviour {
 	private bool reverse = false;
 	private bool grounded = false;
 	private int randomReverseTurn = 0;
+	private float reverseTargetOffsetX = 0.0f;
+	private float reverseTargetOffsetZ = 0.0f;
+	private float reverseTargetOffsetMagnitude = 10.0f;
 
 
-	// Use this for initialization
 	void Start () {
 		nodes = path.GetComponentsInChildren<Transform> ();
 		target = nodes [nodeNumber].transform.position;
@@ -48,6 +50,14 @@ public class FollowPath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Check if you fell off the map
+		if (transform.position.y < -50.0f && nodeNumber > 1) {
+			followingPath = false;
+			path = null;
+			nodeNumber = 0;
+			ObjectPool.instance.PoolObject (gameObject);
+		}
+
 		//Only apply force if following a path, there is a path to follow and the car is grounded
 		if(followingPath && path != null && grounded) {
 			//Check if you're at the end of the path
@@ -88,7 +98,7 @@ public class FollowPath : MonoBehaviour {
 			} else {
 				_rigidbody.AddForce (-transform.forward * powerXZ);
 
-				_rigidbody.AddTorque (Vector3.up * randomReverseTurn * turnRate);
+				//_rigidbody.AddTorque (Vector3.up * randomReverseTurn * turnRate);
 			}
 
 
@@ -133,11 +143,19 @@ public class FollowPath : MonoBehaviour {
 
 		//Magnitude of speed vector
 		if (forwardSpeed < stuckSpeed) {
+			//Car is stuck!
+			//Reverse and add a random offset to the target so you turn
 			reverse = true;
-			randomReverseTurn = Random.Range (-1, 1);
+			reverseTargetOffsetX = Random.Range (-reverseTargetOffsetMagnitude, reverseTargetOffsetMagnitude);
+			reverseTargetOffsetZ = Random.Range (-reverseTargetOffsetMagnitude, reverseTargetOffsetMagnitude);
+
+			target.x += reverseTargetOffsetX;
+			target.z += reverseTargetOffsetZ;
 			yield return new WaitForSeconds (Random.Range(reverseTime - reverseStuckRandomRange,
 															reverseTime + reverseStuckRandomRange));
 			reverse = false;
+			target.x -= reverseTargetOffsetX;
+			target.z -= reverseTargetOffsetZ;
 		}
 
 		checkingStopped = false;

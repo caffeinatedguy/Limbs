@@ -18,8 +18,6 @@ public class ObjectPool : MonoBehaviour
 
 	public int defaultBufferAmount = 3;
 
-	public int defaultMaxAmount = 5;
-
 	/// The container object that will keep unused pooled objects
 	protected GameObject containerObject;
 

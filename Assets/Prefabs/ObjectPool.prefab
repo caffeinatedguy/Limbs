@@ -47,9 +47,9 @@ MonoBehaviour:
   - {fileID: 196292, guid: fbbf7cbe8b648477f82ccc640c06ed76, type: 2}
   - {fileID: 180174, guid: 5487eee166b10489392a4f10222fbd54, type: 2}
   - {fileID: 104378, guid: 464863b898f00402488883179e281e21, type: 2}
+  - {fileID: 190060, guid: af6110ed22e674c36aca26dcadc53f7f, type: 2}
   amountToBuffer: 
   defaultBufferAmount: 3
-  defaultMaxAmount: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
