@@ -34,8 +34,8 @@ public class EditorPathGizmo : MonoBehaviour {
 			{
 				Vector3 previous = nodes [i - 1].position;
 				Gizmos.DrawLine (previous, position);
-				Gizmos.DrawWireSphere (position, 0.3f);
 			}
+			Gizmos.DrawWireSphere (position, 0.3f);
 		}
 
 	}

@@ -46,7 +46,7 @@ public class SelectObjective : MonoBehaviour
 		{
 			SetObjective(affix, GetDirectionObjective(++i));
 
-			if (i > 2)
+			if (i > 3)
 				break;
 		}
 
