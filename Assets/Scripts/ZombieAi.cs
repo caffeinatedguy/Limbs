@@ -6,13 +6,20 @@ using System.Linq;
 [RequireComponent(typeof(NavMeshAgent))]
 public class ZombieAi : MonoBehaviour
 {
+    public int CurrentLimbCount
+    {
+        get { return _currentLimbCount; }
+        set { SetCurrentLimbCount(value); }
+    }
+    private int _currentLimbCount = 4;
+
     public Transform WhosTheDaddy;
+    public List<GameObject> Limbs;
 
     private List<Transform> PlayersToChase = new List<Transform>();
     private NavMeshAgent agent;
     private Transform closestPlayer;
     private float maxSpeed;
-    private int lastLimbCount = 4;
 
     void Start()
     {
@@ -21,7 +28,7 @@ public class ZombieAi : MonoBehaviour
 
         determineWhosOnChaseList();
         closestPlayer = this.transform; // default to not chasing anything
-        Debug.Log("Players on list " + PlayersToChase.Count + "\n" + string.Join(",", PlayersToChase.Select(p => p.name).ToArray()));
+        Debug.Log(this.name + " is chasing after " + PlayersToChase.Count + " players: " + string.Join(",", PlayersToChase.Select(p => p.name).ToArray()));
     }
 
     void Update()
@@ -41,8 +48,8 @@ public class ZombieAi : MonoBehaviour
         agent.SetDestination(closestPlayer.position);
 
         // TODO: delete this test code
-        if (Input.GetButtonDown("Fire2")) SetCurrentLimbCount(lastLimbCount + 1);
-        if (Input.GetButtonDown("Jump")) SetCurrentLimbCount(lastLimbCount - 1);
+        if (Input.GetButtonDown("Fire2")) SetCurrentLimbCount(CurrentLimbCount + 1);
+        if (Input.GetButtonDown("Jump")) SetCurrentLimbCount(CurrentLimbCount - 1);
     }
 
     public void SetCurrentLimbCount(int newNumberLimbs)
@@ -50,19 +57,25 @@ public class ZombieAi : MonoBehaviour
         if (newNumberLimbs < 0)
             newNumberLimbs = 0;
 
-        if (lastLimbCount != newNumberLimbs)
+        if (CurrentLimbCount != newNumberLimbs)
         {
+            // set visibility of limb
+            int limbDelta = CurrentLimbCount - newNumberLimbs;
+            int limbIndex = CurrentLimbCount - (limbDelta < 0 ? 0 : 1);
+            if (limbIndex < Limbs.Count)
+                Limbs[limbIndex].SetActive(limbDelta < 0);
+
+            // set effect of losing limb
             agent.speed = maxSpeed * newNumberLimbs / 4;
-            Debug.Log(this.name + " lost " + (lastLimbCount - newNumberLimbs) + " limbs. " + newNumberLimbs + " left. New speed " + agent.speed);
-            lastLimbCount = newNumberLimbs;
+            //Debug.Log("index" + limbIndex + this.name + " lost " + limbDelta + " limbs. " + newNumberLimbs + " left. New speed " + agent.speed);
+            _currentLimbCount = newNumberLimbs;
         }
     }
 
     private void determineWhosOnChaseList()
     {
         var playerEnumerable = GameObject.FindGameObjectsWithTag("Player")
-            .Select(go => go.transform)
-            .ToList<Transform>();
+            .Select(go => go.transform);
 
         if (WhosTheDaddy != null) // don't chase your daddy
             PlayersToChase = playerEnumerable.Where(t => t != WhosTheDaddy).ToList();
