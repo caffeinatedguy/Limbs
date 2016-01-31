@@ -53,7 +53,7 @@ public class BoatBehavior : MonoBehaviour {
 			_rigidbody.AddForce(forwardForce * power);
 
 			Vector3 direction = target - transform.position;
-			Debug.DrawRay (transform.position, direction);
+			//Debug.DrawRay (transform.position, direction);
 
 			//Current total speed of car
 			Vector3 curspeed = new Vector3 (_rigidbody.velocity.x, _rigidbody.velocity.y, _rigidbody.velocity.z);
