@@ -28,6 +28,9 @@ GameObject:
   - 114: {fileID: 11491414}
   - 54: {fileID: 5486420}
   - 65: {fileID: 6588752}
+  - 136: {fileID: 13677374}
+  - 136: {fileID: 13691234}
+  - 136: {fileID: 13691348}
   m_Layer: 0
   m_Name: Car_Blue
   m_TagString: Untagged
@@ -42,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.9385805, y: 10.55768, z: -35.438477}
+  m_LocalPosition: {x: -3.5088067, y: 41.251472, z: -8.513244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456354}
@@ -101,12 +104,12 @@ Rigidbody:
   m_GameObject: {fileID: 196150}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 4
-  m_AngularDrag: 6
-  m_UseGravity: 0
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6588752
 BoxCollider:
@@ -118,8 +121,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.19, y: 1.23, z: 2.71}
-  m_Center: {x: 0, y: 0.65, z: -0.0000014305115}
+  m_Size: {x: 1.19, y: 0.95, z: 2.71}
+  m_Center: {x: 0, y: 0.86, z: -0.0000014305115}
 --- !u!114 &11491414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +144,45 @@ MonoBehaviour:
   stuckWindow: 1
   reverseTime: 1.5
   reverseStuckRandomRange: 0.5
+--- !u!136 &13677374
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196150}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.68
+  m_Direction: 2
+  m_Center: {x: -0.42, y: 0.35, z: -0.04}
+--- !u!136 &13691234
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196150}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.68
+  m_Direction: 2
+  m_Center: {x: 0.38, y: 0.35, z: -0.04}
+--- !u!136 &13691348
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.68
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.13, z: -0.04}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -174,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
@@ -186,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
-      value: 84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
@@ -202,11 +244,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Drag
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: power
@@ -219,8 +261,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
       value: 10
@@ -228,6 +269,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverseTime
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

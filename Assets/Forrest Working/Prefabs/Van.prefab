@@ -11,6 +11,9 @@ GameObject:
   - 114: {fileID: 11456464}
   - 54: {fileID: 5483256}
   - 65: {fileID: 6526116}
+  - 136: {fileID: 13698366}
+  - 136: {fileID: 13654370}
+  - 136: {fileID: 13662360}
   m_Layer: 0
   m_Name: Van
   m_TagString: Untagged
@@ -54,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.202736, y: 11.710962, z: -36.271484}
+  m_LocalPosition: {x: -3.3941367, y: 41.910805, z: -8.306641}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426230}
@@ -101,12 +104,12 @@ Rigidbody:
   m_GameObject: {fileID: 104378}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 4
-  m_AngularDrag: 6
-  m_UseGravity: 0
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6526116
 BoxCollider:
@@ -118,8 +121,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.54, y: 1.35, z: 2.71}
-  m_Center: {x: 0, y: 0.67, z: 0}
+  m_Size: {x: 1.54, y: 1.05, z: 2.71}
+  m_Center: {x: 0, y: 0.93, z: 0}
 --- !u!114 &11456464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +144,45 @@ MonoBehaviour:
   stuckWindow: 1
   reverseTime: 1.5
   reverseStuckRandomRange: 0.5
+--- !u!136 &13654370
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104378}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.57
+  m_Direction: 2
+  m_Center: {x: -0.57, y: 0.35, z: 0}
+--- !u!136 &13662360
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.57
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.13, z: 0}
+--- !u!136 &13698366
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104378}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.57
+  m_Direction: 2
+  m_Center: {x: 0.56, y: 0.35, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -178,7 +220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
@@ -186,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
-      value: 84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
@@ -198,7 +240,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: power
@@ -206,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Drag
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: turnRate
@@ -219,8 +261,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
       value: 10
@@ -228,6 +269,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverseTime
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

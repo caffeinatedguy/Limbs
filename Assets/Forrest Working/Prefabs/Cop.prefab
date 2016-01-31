@@ -11,6 +11,9 @@ GameObject:
   - 114: {fileID: 11463274}
   - 54: {fileID: 5417032}
   - 65: {fileID: 6561540}
+  - 136: {fileID: 13641406}
+  - 136: {fileID: 13619242}
+  - 136: {fileID: 13676732}
   m_Layer: 0
   m_Name: Cop
   m_TagString: Untagged
@@ -42,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.886719, y: 10.525089, z: -36.91163}
+  m_LocalPosition: {x: -1.3730764, y: 41.609795, z: -8.306641}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476084}
@@ -101,12 +104,12 @@ Rigidbody:
   m_GameObject: {fileID: 130054}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 4
-  m_AngularDrag: 6
-  m_UseGravity: 0
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6561540
 BoxCollider:
@@ -118,8 +121,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.18, z: 2.75}
-  m_Center: {x: 0, y: 0.61, z: -0}
+  m_Size: {x: 1.28, y: 0.97, z: 2.75}
+  m_Center: {x: 0, y: 0.8, z: -0}
 --- !u!114 &11463274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,9 +141,48 @@ MonoBehaviour:
   path: {fileID: 0}
   followingPath: 0
   stuckSpeed: 1
-  stuckWindow: 1
+  stuckWindow: 1.5
   reverseTime: 1.5
   reverseStuckRandomRange: 0.5
+--- !u!136 &13619242
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130054}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.51
+  m_Direction: 2
+  m_Center: {x: -0.44, y: 0.35, z: 0}
+--- !u!136 &13641406
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130054}
+  m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.51
+  m_Direction: 2
+  m_Center: {x: 0.41, y: 0.35, z: 0}
+--- !u!136 &13676732
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 2.51
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.13, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -178,7 +220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
@@ -190,7 +232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
-      value: 84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
@@ -202,7 +244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: power
@@ -210,7 +252,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Drag
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nodeRadius
@@ -219,11 +261,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: reverseTime
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: stuckWindow
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

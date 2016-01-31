@@ -23,6 +23,7 @@ public class FollowPath : MonoBehaviour {
 	private bool stopped = false;
 	private bool checkingStopped = false;
 	private bool reverse = false;
+	private bool grounded = false;
 
 
 	// Use this for initialization
@@ -31,6 +32,7 @@ public class FollowPath : MonoBehaviour {
 		target = nodes [nodeNumber].transform.position;
 		followingPath = true;
 		_rigidbody = GetComponent<Rigidbody> ();
+		_rigidbody.centerOfMass = new Vector3 (_rigidbody.centerOfMass.x, 0.1f, _rigidbody.centerOfMass.z);
 	}
 
 	//Initialize a new path and set it to follow
@@ -45,7 +47,8 @@ public class FollowPath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			if(followingPath && path != null) {
+		//Only apply force if following a path, there is a path to follow and the car is grounded
+		if(followingPath && path != null && grounded) {
 			//Check if you're at the end of the path
 			//Find desired direction towards node
 			Vector3 direction = target - transform.position;
@@ -75,11 +78,15 @@ public class FollowPath : MonoBehaviour {
 			float angleBetween = Vector3.Angle (transform.forward, (target - transform.position));
 			Vector3 normalDirection = Vector3.Cross(transform.forward, (target - transform.position));
 
+			Vector3 forwardPower = transform.forward * power;
+			forwardPower.y = 0;
+			float powerXZ = forwardPower.magnitude;
+
 			//Always Drive Forward or back
 			if (!reverse) {
-				_rigidbody.AddForce (transform.forward * power);
+				_rigidbody.AddForce (transform.forward * powerXZ);
 			} else {
-				_rigidbody.AddForce (-transform.forward * power);
+				_rigidbody.AddForce (-transform.forward * powerXZ);
 			}
 
 
@@ -135,5 +142,13 @@ public class FollowPath : MonoBehaviour {
 		}
 
 		checkingStopped = false;
+	}
+
+	void OnTriggerStay(Collider other){
+		grounded = true;
+	}
+
+	void OnTriggerExit(Collider other){
+		grounded = false;
 	}
 }
