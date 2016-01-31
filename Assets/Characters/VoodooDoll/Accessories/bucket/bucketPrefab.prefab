@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2314090}
   - 95: {fileID: 9540096}
   m_Layer: 0
-  m_Name: bucket
+  m_Name: bucketPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

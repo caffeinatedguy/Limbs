@@ -122,6 +122,7 @@ Subshader {
  // 0: box downsample
  Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }      
 
       CGPROGRAM
       
@@ -133,6 +134,7 @@ Subshader {
 // 1: simple chrom aberration
 Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }      
 
       CGPROGRAM
       
@@ -144,9 +146,11 @@ Pass {
 // 2: simulates more chromatic aberration effects
 Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }
 
       CGPROGRAM
       
+      #pragma exclude_renderers flash
       #pragma vertex vert
       #pragma fragment fragComplex
       

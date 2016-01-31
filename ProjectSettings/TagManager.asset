@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DynamicWaterObstruction
+  - DynamicWaterObstructionInverted
+  - DynamicWaterPlaneCollider
+  - DynamicWater
   layers:
   - Default
   - TransparentFX
@@ -36,7 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - DynamicWaterPlaneCollider
   m_SortingLayers:
   - name: Default
     uniqueID: 0

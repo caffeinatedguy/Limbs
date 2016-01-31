@@ -144,10 +144,13 @@ Shader "Hidden/BlurAndFlares" {
 	
 Subshader {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off } 
  Pass {     
 
       CGPROGRAM
       
+      #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma exclude_renderers flash
       #pragma vertex vert
       #pragma fragment fragPostNoBlur
       
@@ -158,6 +161,8 @@ Subshader {
 
       CGPROGRAM
       
+      #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma exclude_renderers flash
       #pragma vertex vertStretch
       #pragma fragment fragStretch
       
@@ -169,6 +174,8 @@ Subshader {
 
       CGPROGRAM
       
+      #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma exclude_renderers flash
       #pragma vertex vertWithMultiCoords
       #pragma fragment fragPreAndCut
       
@@ -180,6 +187,8 @@ Subshader {
 
       CGPROGRAM
       
+      #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma exclude_renderers flash
       #pragma vertex vertWithMultiCoords
       #pragma fragment fragPost
       
@@ -190,6 +199,8 @@ Subshader {
 
       CGPROGRAM
       
+      #pragma fragmentoption ARB_precision_hint_fastest
+      #pragma exclude_renderers flash
       #pragma vertex vertWithMultiCoords2
       #pragma fragment fragGaussBlur
       

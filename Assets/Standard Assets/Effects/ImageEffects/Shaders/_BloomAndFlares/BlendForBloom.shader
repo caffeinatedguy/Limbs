@@ -116,11 +116,13 @@ Shader "Hidden/BlendForBloom" {
 	
 Subshader {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }  
 
  // 0: nicer & softer "screen" blend mode	  		  	
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragScreen
       ENDCG
@@ -130,6 +132,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragAdd
       ENDCG
@@ -138,6 +141,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vertMultiTap
       #pragma fragment fragMultiTapMax
       ENDCG
@@ -146,6 +150,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragVignetteMul
       ENDCG
@@ -154,6 +159,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragScreenCheap
       ENDCG
@@ -162,6 +168,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragAddCheap
       ENDCG
@@ -170,6 +177,7 @@ Subshader {
  Pass {    
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vertMultiTap
       #pragma fragment fragMultiTapBlur
       ENDCG
@@ -180,6 +188,7 @@ Subshader {
  	  Blend Zero SrcAlpha
 
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragVignetteBlend
       ENDCG
@@ -188,6 +197,7 @@ Subshader {
  Pass {    
  	  
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragClear
       ENDCG
@@ -198,6 +208,7 @@ Subshader {
  	  Blend One One
  	  
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment fragAddOneOne
       ENDCG
@@ -209,6 +220,7 @@ Subshader {
  	  Blend One One
  	  
       CGPROGRAM
+      #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment frag1Tap
       ENDCG

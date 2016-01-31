@@ -159,7 +159,7 @@
 			// velocity at y 
 			float2 vy = tex2Dlod(_VelTex, float4(yf,0,0)).xy;
 
-			float zy = SAMPLE_DEPTH_TEXTURE_LOD(_CameraDepthTexture, float4(y,0,0));
+			float zy = SAMPLE_DEPTH_TEXTURE_LOD(_CameraDepthTexture, float4(y,0,0))); 
 			zy = -Linear01Depth(zy);
 			float f = softDepthCompare(zx, zy);
 			float b = softDepthCompare(zy, zx);
@@ -183,11 +183,13 @@ Subshader {
 	// pass 0
 	Pass {
 		ZTest Always Cull Off ZWrite Off
+		Fog { Mode off }      
 
 		CGPROGRAM
 		#pragma target 5.0
 		#pragma vertex vert
 		#pragma fragment TileMax
+		#pragma fragmentoption ARB_precision_hint_fastest
 
 		ENDCG
 	}
@@ -195,11 +197,13 @@ Subshader {
 	// pass 1
 	Pass {
 		ZTest Always Cull Off ZWrite Off
+		Fog { Mode off }      
 
 		CGPROGRAM
 		#pragma target 5.0
 		#pragma vertex vert
 		#pragma fragment NeighbourMax
+		#pragma fragmentoption ARB_precision_hint_fastest
 
 		ENDCG
 	}
@@ -207,11 +211,13 @@ Subshader {
 	// pass 2
 	Pass {
 		ZTest Always Cull Off ZWrite Off
+		Fog { Mode off }      
 
 		CGPROGRAM
 		#pragma target 5.0
 		#pragma vertex vert 
 		#pragma fragment ReconstructFilterBlur
+		#pragma fragmentoption ARB_precision_hint_fastest
 
 		ENDCG
 	}
