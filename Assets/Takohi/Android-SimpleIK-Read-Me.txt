@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------
+Takohi Android SimpleIK (Unity3+4)
+(C)opyright 2014 Takohi 
+[contact@takohi.com]
+-------------------------------------------------------------------------
+
+INSTALLATION FROM UNITY ASSET STORE
+
+After you download and import this package from the Unity Asset Store, this product will be automatically be installed.
+
+After importing is complete, you will be ready to go.
+
+-------------------------------------------------------------------------
+
+Examples
+
+in  [Project] /Takohi/Examples/SimpleIK you will find one example.
+
+-------------------------------------------------------------------------
+
+Demo
+
+You can try a demo to run on your internet browser:
+http://www.takohi.com/data/unity/assets/simpleik/
+
+-------------------------------------------------------------------------
+
+Tutorial
+
+You can find a tutorial at the following url to learn how to use SimpleIK:
+http://www.takohi.com/use-simple-ik-on-unity/
+
+-------------------------------------------------------------------------
+
+PACKAGE STRUCTURE
+
+ [Project] Takohi/ - SimpleIK Script
+
+ [Project] Takohi/Examples/SimpleIK	- SimpleIK Scene Example
+
+-------------------------------------------------------------------------
+
+UPDATE
+
+1.0b 2014/02/25
+Add link to a tutorial to learn how to use this asset (http://www.takohi.com/use-simple-ik-on-unity/).
+
+1.0a 2014/02/05
+Bug fix in demo scene.
+
+1.0 2014/02/04
+Initial version.
+
+If you have any questions regarding this product, send us an email at contact@takohi.com.
+
+-------------------------------------------------------------------------
+
+Thanks for your interest in our components,
+
+	The Takohi Team.
+

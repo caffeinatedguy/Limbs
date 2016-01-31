@@ -12,7 +12,7 @@ public class TeamManager2
     public int NumberOfTeams = 2;
     [Tooltip("This needs to exactly match the affix for Horizontal and Vertical settings in Edit->Project Settings->Input")]
     public List<string> ControllerSchemes = new List<string>() {
-		"Wasd", "GP1", "GP2", "GP3", "GP4"  /* WASD */, "Arrows"
+		"GP1", "GP2", "GP3", "GP4","Wasd"  /* WASD */, "Arrows"
     };
 
     public Team this[int i]

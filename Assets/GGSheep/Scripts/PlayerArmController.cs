@@ -6,7 +6,6 @@ public class PlayerArmController : MonoBehaviour
 	[SerializeField]
 	private GameObject _limbToMove;
 
-	[SerializeField]
 	Player _player;
 
 	[SerializeField]
@@ -20,6 +19,7 @@ public class PlayerArmController : MonoBehaviour
 
 	void  Awake ()
 	{
+		_player = GetComponent<Player> ();
 	}
 
 	void Update()
@@ -41,7 +41,7 @@ public class PlayerArmController : MonoBehaviour
 		//_target.transform.position = _limbToMove.transform.position + targetDirection;
 
 
-		_limbToMove.transform.LookAt ( _limbToMove.transform.position + targetDirection);
+		//_limbToMove.transform.LookAt ( _limbToMove.transform.position + targetDirection);
 
 	}
 

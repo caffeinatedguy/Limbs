@@ -48,7 +48,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 2191478c1f641c245b4fe9449817a0b7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
