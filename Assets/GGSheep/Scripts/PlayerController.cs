@@ -30,7 +30,11 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private CharacterState _characterState;
-	
+
+
+
+	private float _jumpForce = 400;
+
 	// The speed when walking
 	public float walkSpeed= 2.0f;
 	// after trotAfterSeconds of walking we trot with trotSpeed
@@ -214,7 +218,7 @@ public class PlayerController : MonoBehaviour
 		if (isControllable)	// don't move player at all if not controllable.
 		{
 			// Apply gravity
-			bool jumpButton= Input.GetButton("Jump");	
+			bool jumpButton = Input.GetButton(Globals.Instance.ManageTeam.GetPlayerAxisName("Jump", _player.playerId));	
 			
 			// When we reach the apex of the jump we send out a message
 			if (jumping && !jumpingReachedApex && verticalSpeed <= 0.0f)
@@ -258,51 +262,46 @@ public class PlayerController : MonoBehaviour
 		
 		moveSpeed = GetMovementDirection();
 
-		//
+		string name = Globals.Instance.ManageTeam.GetPlayerAxisName ("Jump", _player.playerId);
 
-		//ApplyGravity();
+
+		Vector3 vUpForce = new Vector3 (0, 0, 0);
+
+		//
+		bool jumpButton = Input.GetButtonDown(name);	
+		if (jumpButton) 
+		{			
+			jumping = true;
+			vUpForce = new Vector3 (0, _jumpForce, 0);
+		}
+
+		string toggleLimbName = Globals.Instance.ManageTeam.GetPlayerAxisName ("LeftTrigger", _player.playerId);
+		float toggleValue = Input.GetAxis (toggleLimbName);
+
+		Debug.Log ("toggleValue = " + toggleValue.ToString ());
+
+		string grabName = Globals.Instance.ManageTeam.GetPlayerAxisName ("RightTrigger", _player.playerId);
+		float grabValue = Input.GetAxis (grabName);
+
+		Debug.Log ("grabValue = " + grabValue.ToString ());
+
 		
 		// Calculate actual motion
 		Vector3 movement = moveDirection * moveSpeed + new Vector3 (0, verticalSpeed, 0);
 		movement *= Time.deltaTime;
 
-
-		//movement -= new Vector3 (0.0f, Physics.gravity.y * 0.75f, 0.0f);
-
-		//if(movement.sqrMagnitude > 0.01f)
-		//{
-
-			ApplyForce (movement);
-
-			//Debug.Log ("Movement = " + movement.ToString ());
-		//}
-
-		foreach (GameObject limb in _limbs) 
-		{
-			//limb.transform.RotateAround (transform.position, transform.right, 10.1f);
-		}
+		movement += vUpForce;
 
 
 
-		
-		// Move the controller
-		//CharacterController controller = GetComponent<CharacterController>();
-		//if (movement.sqrMagnitude > 0.01f) 
-		//{
-		//	controller.transform.LookAt (controller.transform.position + movement);
-		//}
-		//collisionFlags = controller.Move(movement);
+		ApplyForce (movement);
 
 
 
 
 	}
 
-	void LateUpdate()
-	{
-		
-	}
-	
+
 	void OnControllerColliderHit ( ControllerColliderHit hit   )
 	{
 		//	Debug.DrawRay(hit.point, hit.normal);
