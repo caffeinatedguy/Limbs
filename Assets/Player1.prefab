@@ -436,7 +436,8 @@ GameObject:
   - 114: {fileID: 11455166}
   - 65: {fileID: 6590542}
   - 54: {fileID: 5430108}
-  - 114: {fileID: 11401790}
+  - 114: {fileID: 11431988}
+  - 114: {fileID: 11493010}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -988,7 +989,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.27, z: 1}
+  m_Size: {x: 0.4, y: 1.27, z: 1}
   m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!95 &9528738
 Animator:
@@ -1007,19 +1008,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11401790
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08256b8b710cf47eeaf64efe9c1f02fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _limbToMove: {fileID: 170178}
-  _player: {fileID: 11421508}
 --- !u!114 &11421508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1039,6 +1027,55 @@ MonoBehaviour:
   minPlayerHeadSize: 1
   maxPlayerHeadSize: 2
   meshRenderer: {fileID: 0}
+--- !u!114 &11431988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174d918159c79b8419cdef9a37d45cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 1
+  Target: {fileID: 0}
+  JointEntities:
+  - Joint: {fileID: 496066}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 468798}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  - Joint: {fileID: 463998}
+    AngleRestrictionRange:
+      xAxis: 0
+      xMin: 0
+      xMax: 0
+      yAxis: 0
+      yMin: 0
+      yMax: 0
+      zAxis: 0
+      zMin: 0
+      zMax: 0
+  IsDamping: 0
+  DampingMax: 0.5
 --- !u!114 &11455166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1077,6 +1114,22 @@ MonoBehaviour:
   - {fileID: 0}
   _moveBodys:
   - {fileID: 5430108}
+--- !u!114 &11493010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08256b8b710cf47eeaf64efe9c1f02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _limbToMove: {fileID: 179982}
+  _target: {fileID: 0}
+  _rotationAngle: {x: 0, y: 0, z: 0}
+  _forward: {x: 0, y: 0, z: 1}
+  _offsetY: 1.1
 --- !u!137 &13729084
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
