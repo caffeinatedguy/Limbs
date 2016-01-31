@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 442678}
   - 114: {fileID: 11460664}
   - 54: {fileID: 5456970}
+  - 65: {fileID: 6526872}
   m_Layer: 0
   m_Name: Pickup_Empty
   m_TagString: Untagged
@@ -27,7 +28,6 @@ GameObject:
   - 4: {fileID: 422168}
   - 33: {fileID: 3304900}
   - 23: {fileID: 2361996}
-  - 65: {fileID: 6528330}
   m_Layer: 0
   m_Name: ute_empty_blue
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.886719, y: 10.23177, z: -35.70576}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422168}
@@ -100,26 +100,26 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100394}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 2
+  m_Mass: 10
+  m_Drag: 4
   m_AngularDrag: 6
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!65 &6528330
+--- !u!65 &6526872
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157700}
+  m_GameObject: {fileID: 100394}
   m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1594024, y: 2.518061, z: 5.3768573}
-  m_Center: {x: 0, y: 1.2566122, z: 0.0000026226044}
+  m_Size: {x: 1.27, y: 1.26, z: 2.65}
+  m_Center: {x: 0, y: 0.65, z: 0.0000026226044}
 --- !u!114 &11460664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,12 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8c0aefab3384b34ba5a8a671f05fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
-  speed: 5
-  turnRate: 5
+  power: 150
+  speed: 10
+  turnRate: 80
   nodeRadius: 2
   path: {fileID: 0}
   followingPath: 0
+  stuckSpeed: 1
+  stuckWindow: 1
+  reverseTime: 1.5
+  reverseStuckRandomRange: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -174,7 +178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
@@ -194,7 +198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: turnRate
-      value: 5
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
@@ -202,11 +206,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: power
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Drag
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nodeRadius
@@ -217,6 +221,14 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverseTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100394}

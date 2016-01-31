@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 464568}
   - 33: {fileID: 3348646}
   - 23: {fileID: 2322174}
-  - 65: {fileID: 6575136}
   m_Layer: 0
   m_Name: taxi_mesh
   m_TagString: Untagged
@@ -28,6 +27,7 @@ GameObject:
   - 4: {fileID: 447874}
   - 114: {fileID: 11458678}
   - 54: {fileID: 5441376}
+  - 65: {fileID: 6537876}
   m_Layer: 0
   m_Name: Taxi
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12.529297, y: 11.268909, z: -36.187496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464568}
@@ -100,26 +100,26 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180174}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 2
+  m_Mass: 10
+  m_Drag: 4
   m_AngularDrag: 6
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!65 &6575136
+--- !u!65 &6537876
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166368}
+  m_GameObject: {fileID: 180174}
   m_Material: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.32962, y: 3.083445, z: 5.6647816}
-  m_Center: {x: 0, y: 1.5432217, z: 0}
+  m_Size: {x: 1.36, y: 1.32, z: 2.84}
+  m_Center: {x: 0, y: 0.67, z: 0}
 --- !u!114 &11458678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,12 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8c0aefab3384b34ba5a8a671f05fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
-  speed: 5
-  turnRate: 5
+  power: 150
+  speed: 10
+  turnRate: 80
   nodeRadius: 2
   path: {fileID: 0}
   followingPath: 0
+  stuckSpeed: 1
+  stuckWindow: 1
+  reverseTime: 1.5
+  reverseStuckRandomRange: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -170,7 +174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
@@ -198,11 +202,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: power
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Drag
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nodeRadius
@@ -210,13 +214,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: turnRate
-      value: 5
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 9166722bcd2894c3f8048deaf18161fd,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverseTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180174}
