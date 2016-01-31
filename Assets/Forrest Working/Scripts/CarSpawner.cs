@@ -38,7 +38,6 @@ public class CarSpawner : MonoBehaviour {
 		GameObject car = ObjectPool.instance.GetObjectOfType (carToGet, false);
 		FollowPath carScript = car.GetComponent<FollowPath>();
 		int pathIndex = Random.Range (0, paths.Length);
-		Debug.Log("Spawning index :" + pathIndex + " There are " + paths.Length);
 		carScript.SetUpPath (paths [pathIndex], transform);
 		readyToSpawn = true;
 	}

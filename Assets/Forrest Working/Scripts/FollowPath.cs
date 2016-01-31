@@ -70,7 +70,6 @@ public class FollowPath : MonoBehaviour {
 
 			//Check if car is "stuck"
 			if (forwardSpeed < stuckSpeed && !checkingStopped) {
-				Debug.Log ("Checking Stopped on " + gameObject.name + " with speed " + curspeedMagnitude);
 				checkingStopped = true;
 				StartCoroutine("CheckStopped");
 			}
@@ -129,10 +128,8 @@ public class FollowPath : MonoBehaviour {
 		//Find the projection of the total speed in the forward direction
 		float forwardSpeed = Vector3.Project (curspeed, transform.forward.normalized).magnitude;
 
-		Debug.Log ("Checking again on " + gameObject.name + " with forward speed " + forwardSpeed);
 		//Magnitude of speed vector
 		if (forwardSpeed < stuckSpeed) {
-			Debug.Log ("Reversing on " + gameObject.name);
 			reverse = true;
 			turnRate += 50.0f;
 			yield return new WaitForSeconds (Random.Range(reverseTime - reverseStuckRandomRange,
