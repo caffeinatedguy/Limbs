@@ -260,18 +260,18 @@ public class PlayerController : MonoBehaviour
 		//ApplyGravity();
 		
 		// Calculate actual motion
-		Vector3 movement = moveDirection * moveSpeed + new Vector3 (0, verticalSpeed + 400, 0);
+		Vector3 movement = moveDirection * moveSpeed + new Vector3 (0, verticalSpeed, 0);
 		movement *= Time.deltaTime;
 
 
+		movement -= new Vector3 (0.0f, Physics.gravity.y * 0.75f, 0.0f);
 
-
-		if(movement.sqrMagnitude > 0.01f)
-		{
+		//if(movement.sqrMagnitude > 0.01f)
+		//{
 			ApplyForce (movement);
 
-			Debug.Log ("Movement = " + movement.ToString ());
-		}
+			//Debug.Log ("Movement = " + movement.ToString ());
+		//}
 
 		foreach (GameObject limb in _limbs) 
 		{
