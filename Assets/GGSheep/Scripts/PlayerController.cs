@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
 			//body.AddTorque (transform.right * Time.deltaTime * _torqValue);
 			body.AddForce(force);
 
-			Debug.Log ("Adding force " + body.name + "_" + force.ToString());
+			//Debug.Log ("Adding force " + body.name + "_" + force.ToString());
 		}
 	}
 	
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
 
 
 			targetSpeed *= trotSpeed;
-			Debug.Log ("targetSpeed = " + targetSpeed.ToString ());
+			//Debug.Log ("targetSpeed = " + targetSpeed.ToString ());
 		}
 		// In air controls
 		else

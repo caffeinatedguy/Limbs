@@ -22,6 +22,7 @@ public class TrackingCamera : MonoBehaviour
 		this.homePosition = this.transform.position;
 		this.players = FindObjectsOfType<Player>().ToList();
 		this.playerCoG = this.CenterOfGravity();
+		Debug.Log ("Start update tracking");
     }
 
     /// <summary>
@@ -29,6 +30,7 @@ public class TrackingCamera : MonoBehaviour
     /// </summary>
     internal void FixedUpdate()
     {
+		Debug.Log ("Fixed update tracking");
 		var currentPlayerCoG = this.CenterOfGravity();
 		var offset = currentPlayerCoG - this.playerCoG;
 		var targetPosition = this.homePosition + offset;
