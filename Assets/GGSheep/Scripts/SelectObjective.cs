@@ -96,7 +96,7 @@ public class SelectObjective : MonoBehaviour
                 GetComponent<AudioSource>().Play();
             }
 
-            Debug.Log("added new " + controllerAffix + " player to team " + Globals.Instance.ManageTeam.GetTeamNumber(player.PlayerNumber));
+            //Debug.Log("added new " + controllerAffix + " player to team " + Globals.Instance.ManageTeam.GetTeamNumber(player.PlayerNumber));
 
     }
 
