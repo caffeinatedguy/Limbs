@@ -10,7 +10,22 @@ public class WeaponPush : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
+	}
+
+	void OnTriggerEnter(Collider collider)
+	{
+		if (collider.gameObject != null) 
+		{
+			Player other = collider.transform.GetComponentInParent<Player> ();
+			Player you = transform.GetComponentInParent<Player> ();
+			if(other != you)
+			{
+				//other.GetComponent<Rigidbody> ().AddExplosionForce (3, transform.position, 10);
+				//Debug.Log ("COLLIDE");
+			}
+		}
 	}
 }

@@ -268,22 +268,22 @@ public class PlayerController : MonoBehaviour
 		Vector3 vUpForce = new Vector3 (0, 0, 0);
 
 		//
-		bool jumpButton = Input.GetButtonDown(name);	
-		if (jumpButton) 
-		{			
-			jumping = true;
-			vUpForce = new Vector3 (0, _jumpForce, 0);
-		}
+		//bool jumpButton = Input.GetButtonDown(name);	
+		//if (jumpButton) 
+		//{			
+		//	jumping = true;
+		//	vUpForce = new Vector3 (0, _jumpForce, 0);
+		//}
 
 		string toggleLimbName = Globals.Instance.ManageTeam.GetPlayerAxisName ("LeftTrigger", _player.playerId);
 		float toggleValue = Input.GetAxis (toggleLimbName);
 
-		Debug.Log ("toggleValue = " + toggleValue.ToString ());
+		//Debug.Log ("toggleValue = " + toggleValue.ToString ());
 
 		string grabName = Globals.Instance.ManageTeam.GetPlayerAxisName ("RightTrigger", _player.playerId);
 		float grabValue = Input.GetAxis (grabName);
 
-		Debug.Log ("grabValue = " + grabValue.ToString ());
+		//Debug.Log ("grabValue = " + grabValue.ToString ());
 
 		
 		// Calculate actual motion
