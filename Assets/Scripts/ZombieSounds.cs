@@ -17,7 +17,7 @@ public class ZombieSounds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if((Random.Range(0, 500) == playChance)  && canPlay) {
+		if((Random.Range(0, 2500) == playChance)  && canPlay) {
 			audio.clip = clips [Random.Range (0, clips.Length - 1)];
 			audio.Play ();
 			canPlay = false;
